@@ -1,1 +1,301 @@
+/* === BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Courier New', monospace;
+  background: #0f111a;
+  color: #cfd8dc;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+  font-size: 2.5rem;
+  color: #00fff7;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #80deea;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #eceff1;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  color: #90a4ae;
+  font-size: 0.95rem;
+}
+
+strong {
+  color: #cfd8dc;
+  font-weight: bold;
+}
+
+a {
+  color: #00fff7;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: #00fff7;
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #cfd8dc;
+}
+
+/* === SECTIONS === */
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #141823;
+  border-radius: 8px;
+  border: 1px solid #1f2433;
+}
+
+.lead {
+  font-size: 1rem;
+  color: #cfd8dc;
+  margin-bottom: 1.5rem;
+}
+
+/* === PROBLEM SECTION === */
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.option {
+  background: #1c202d;
+  padding: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #37474f;
+  text-align: center;
+}
+
+.option .icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.option h3 {
+  margin-bottom: 0.5rem;
+}
+
+.option p {
+  font-size: 0.85rem;
+  color: #78909c;
+}
+
+.insight {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #1c202d;
+  border-left: 3px solid #00fff7;
+  border-radius: 4px;
+  color: #cfd8dc;
+}
+
+/* === SOLUTION SECTION === */
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  min-width: 150px;
+  background: #1c202d;
+  padding: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #37474f;
+  text-align: center;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  background: #00fff7;
+  color: #0f111a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 0.8rem;
+}
+
+.step-arrow {
+  color: #00fff7;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.outcome {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #1c202d;
+  border-left: 3px solid #00fff7;
+  border-radius: 4px;
+  color: #cfd8dc;
+}
+
+/* === DIFFERENCE SECTION === */
+.difference ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.difference li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #1f2433;
+  color: #90a4ae;
+}
+
+.difference li:last-child {
+  border-bottom: none;
+}
+
+/* === CTA SECTION === */
+.cta {
+  text-align: center;
+  background: #1c202d;
+  border: 2px solid #00fff7;
+}
+
+.cta h2 {
+  color: #00fff7;
+  margin-bottom: 0.5rem;
+}
+
+#waitlist-form {
+  margin: 2rem 0 1rem;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+#waitlist-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.8rem 1rem;
+  background: #0f111a;
+  border: 1px solid #37474f;
+  border-radius: 4px;
+  color: #cfd8dc;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+#waitlist-form input:focus {
+  outline: none;
+  border-color: #00fff7;
+}
+
+#waitlist-form button {
+  padding: 0.8rem 1.5rem;
+  background: #00fff7;
+  color: #0f111a;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+#waitlist-form button:hover {
+  background: #80deea;
+  transform: translateY(-1px);
+}
+
+.privacy {
+  font-size: 0.8rem;
+  color: #607d8b;
+  margin-top: 0.5rem;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #1f2433;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: #607d8b;
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  margin-top: 0.5rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+
+  #waitlist-form {
+    flex-direction: column;
+  }
+
+  #waitlist-form input,
+  #waitlist-form button {
+    width: 100%;
+  }
+}
