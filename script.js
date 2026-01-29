@@ -1,14 +1,3 @@
-// Smooth scroll for any future internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
 // Form submission handling
 const form = document.getElementById('waitlist-form');
 const button = form.querySelector('button');
@@ -21,8 +10,8 @@ form.addEventListener('submit', function(e) {
   button.disabled = true;
 });
 
-// If using Formspree, it will redirect or show confirmation
-// If you want custom handling, prevent default and use fetch instead:
+// Optional: Custom fetch handling instead of Formspree redirect
+// Uncomment below if you want custom success handling
 
 /*
 form.addEventListener('submit', async function(e) {
@@ -62,29 +51,3 @@ form.addEventListener('submit', async function(e) {
   }
 });
 */
-
-// Fade in elements on scroll (optional enhancement)
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, observerOptions);
-
-// Observe all sections for fade-in effect
-document.querySelectorAll('section').forEach(section => {
-  section.style.opacity = '0';
-  section.style.transform = 'translateY(20px)';
-  section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(section);
-});
-
-// Header fades in immediately
-document.querySelector('header').style.opacity = '1';
