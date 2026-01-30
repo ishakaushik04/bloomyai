@@ -49,4 +49,5 @@ If you're interested in:
 - helping shape how Bloomy works
 
 You’re invited to be part of this journey.
+
 Note: The Bloomy name, concept, and educational framework are not open for reuse without permission.
